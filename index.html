@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Diwali Wishes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animation for text fade */
+    .fade {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .fade.show {
+      opacity: 1;
+    }
+
+    /* Sparkle rain effect */
+    .sparkle {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background: rgb(238, 238, 35);
+      border-radius: 50%;
+      top: -10px;
+      animation: fall 3s linear forwards;
+      box-shadow: 0 0 10px orangered, 0 0 20px rgb(218, 218, 72);
+    }
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-purple-800 via-pink-700 to-yellow-500 min-h-screen flex flex-col items-center justify-center text-purple overflow-hidden">
+
+  <!-- Heading -->
+  <h1 class="text-4xl md:text-6xl font-bold mb-10 text-center drop-shadow-lg animate-bounce">
+    🪔 Happy Diwali 🪔
+  </h1>
+
+  <!-- Wish Text -->
+  <p id="wishText" class="text-2xl font-semibold text-center fade">
+    Click the button below to see Diwali wishes 🎇
+  </p>
+
+  <!-- Button -->
+  <button onclick="showWish()" class="mt-10 px-6 py-3 bg-yellow-300 text-black font-bold rounded-full hover:bg-yellow-200 shadow-lg animate-pulse">
+    🎆 Show Wish 🎆
+  </button>
+
+  <!-- Footer -->
+  <p class="mt-16 text-sm opacity-80">Crafted with ❤️ joy & light for a brighter Diwali</p>
+
+  
+ <script src="main.js"></script>
+</body>
+</html>
